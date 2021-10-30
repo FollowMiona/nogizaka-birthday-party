@@ -47,11 +47,8 @@ class ics_events
 			}
 			$cp[]='END:VCALENDAR';
 	
-		}
-		
-	//	echo "<pre>";
-	//	print_r($cp);
-		
+		}		
+	
 		return implode("\r\n", $cp);
 	
 	}
@@ -83,18 +80,11 @@ class ics_events
 
 }
 
-//header('Content-Type: text/calendar; charset=utf-8');
-//header('Content-Disposition: attachment; filename=nogizaka46.ics');
-
 $events = array();
 
 $bdays = $_POST['bday'];
 
-//print_r($bdays);
-
-foreach($bdays as $k => $b){
-	//print_r($k);
-	//print_r($b);
+foreach($bdays as $k => $b){	
 	$events[]=array(
 		'description' => '🎉 '.$k,
 		'summary' => '🎉 '.$k,
